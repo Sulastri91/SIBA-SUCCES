@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Berhasil - UPTD SDN Dinoyo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e6f0fa 0%, #f4f4f4 100%); /* Latar gradien halus */
+            color: #333;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header Styling */
+        header {
+            background-color: #0057b8; /* Biru lebih modern */
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            gap: 15px; /* Jarak logo dan judul */
+        }
+
+        .logo img {
+            width: 70px;
+            height: auto;
+        }
+
+        .header-title h1 {
+            color: white;
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .header-title p {
+            color: #d0e4ff;
+            font-size: 13px;
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 500px; /* Kotak lebih kecil */
+            background-color: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            text-align: center;
+            position: absolute; /* Posisi absolut untuk centering */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* Centered sempurna */
+            animation: fadeIn 0.5s ease-out; /* Animasi masuk */
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translate(-50%, -60%); }
+            to { opacity: 1; transform: translate(-50%, -50%); }
+        }
+
+        .container h2 {
+            color: #0057b8;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .container p {
+            color: #555;
+            font-size: 14px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+
+        .btn-back {
+            background-color: #0057b8;
+            color: white;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .btn-back:hover {
+            background-color: #004494;
+            box-shadow: 0 0 10px rgba(0, 87, 184, 0.5);
+        }
+
+        .btn-back::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+            transition: 0.5s;
+        }
+
+        .btn-back:hover::before {
+            left: 100%;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #0057b8;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 13px;
+            width: 100%;
+            margin-top: auto; /* Footer di bawah */
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                max-width: 85%;
+                padding: 20px;
+            }
+
+            .logo img {
+                width: 60px;
+            }
+
+            .header-title h1 {
+                font-size: 20px;
+            }
+
+            .header-title p {
+                font-size: 12px;
+            }
+
+            .container h2 {
+                font-size: 18px;
+            }
+
+            .container p {
+                font-size: 13px;
+            }
+
+            .btn-back {
+                padding: 7px 15px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="logo.png" alt="Logo SDN Dinoyo">
+        </div>
+        <div class="header-title">
+            <h1>Pendaftaran Siswa Baru</h1>
+            <p>UPTD SDN Dinoyo - Tahun Ajaran 2025/2026</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2>Pendaftaran Berhasil!</h2>
+        <p>Terima kasih atas pendaftaran Anda. Tim kami akan segera menghubungi Anda.</p>
+        <a href="index.html" class="btn-back">Kembali ke Beranda</a>
+    </div>
+
+    <footer>
+        <p>© 2025 UPTD SDN Dinoyo. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
